@@ -1,6 +1,6 @@
 {
   "name": "vue-progress-bar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue progress bar component.",
   "main": "src/parts/vue.progress-bar.js",
   "scripts": {

@@ -17,13 +17,13 @@ Then, to use the component in regular HTML:
 Or with NodeJS:
 ```javascript
 // As global component
-Vue.component('progress-bar', require('./parts/vue.progress-bar'));
+Vue.component('progress-bar', require('vue-progress-bar'));
 
 // As regular element component
 var appSample = new Vue({
     el:'#my-app',
     components: {
-        'progress-bar': require('./parts/vue.progress-bar'),
+        'progress-bar': require('vue-progress-bar'),
     } 
 });
 ```

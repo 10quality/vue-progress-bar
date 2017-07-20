@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Progress Bar Demo | Vue Component</title>
+    </head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous"
+    >
+    <body>
+
+        <div id="app" class="container">
+
+            <h1>Progress Bar</h1>
+
+            <p class="text-muted">Set a float or decimal value to see progress bar in action.</p>
+
+            <div class="form-group">
+                <label for="progress">Progress</label>
+                <input type="number"
+                    class="form-control"
+                    id="progress"
+                    placeholder="i.e. 0.5 or 50"
+                    v-model="progress"
+                />
+            </div>
+
+            <hr>
+
+            <progress-bar v-model="progress"></progress-bar>
+
+        </div>
+        <script src="./../node_modules/vue/dist/vue.js"></script>
+        <script src="./../dist/vue.progress-bar.min.js"></script>
+        <script type="text/javascript">
+            window.app = new Vue({el:'#app', data:{progress:undefined}});
+        </script>
+    </body>
+</html>

@@ -127,13 +127,13 @@ module.exports = {
          * Progress value.
          * @since 1.0.0
          *
-         * @return float 
+         * @return float
          */
         progress: function()
         {
             if (this.value === undefined)
                 return 0;
-            return this.value > 1
+            return this.value >= 1
                 ? parseFloat(this.value) / 100
                 : parseFloat(this.value);
         },

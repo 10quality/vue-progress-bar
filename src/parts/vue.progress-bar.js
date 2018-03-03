@@ -6,7 +6,7 @@
  * @author Alejandro Mostajo <info@10quality.com>
  * @copyright 10 Quality <http://www.10quality.com>
  * @license MIT
- * @version 1.0.0
+ * @version 1.0.1
  */
 module.exports = {
     /**
@@ -97,6 +97,19 @@ module.exports = {
             type: String,
             default: '#8BC34A',
         },
+        /**
+         * Flag that indicates if the expected percentage value is in decimals or not.
+         * If true, 1 will be considered 100%, if false it will be considered 1%.
+         *
+         * @since 1.0.1
+         *
+         * @var bool
+         */
+        useDecimal:
+        {
+            type: Boolean,
+            default: true,
+        },
     },
     /**
      * Watchers.
@@ -126,6 +139,7 @@ module.exports = {
         /**
          * Progress value.
          * @since 1.0.0
+         * @since 1.0.1 Uses useDecimal property to determine value.
          *
          * @return float 
          */
@@ -133,7 +147,7 @@ module.exports = {
         {
             if (this.value === undefined)
                 return 0;
-            return this.value > 1
+            return this.useDecimal === false
                 ? parseFloat(this.value) / 100
                 : parseFloat(this.value);
         },

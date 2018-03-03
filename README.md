@@ -39,6 +39,7 @@ Simple add the markup in your template as follows. Use `v-model` to bind the pro
 ### Properties
 | Property           | Default | Description                                                   |
 | ------------------ | ------- | ------------------------------------------------------------- |
+| `use-decimal`      | true    | Flag used to indicate if the progress value is in decimals or interger. When `true` a value like `0.7` will represent 70%; and when `false`, a value like `70` will represent 70%. |
 | `css-class`        |         | CSS class to be appended to component default `progress-bar`. |
 | `height`           | 20      | Progress bar height in pixels.                                |
 | `background-color` | #FFF    | Background color of the component.                            |
